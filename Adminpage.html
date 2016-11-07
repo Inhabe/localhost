@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://mybootstrap.ru/examples/signin.html -->
+<html lang="en">
+   <head>
+
+<script>
+function GoToUser()
+{
+  console.log("ehy");
+  window.location = "/";
+}
+</script>
+
+<script>
+  function Filler()
+  {
+    $.ajax({
+      dataType: 'text',
+      url: '/admin/tickets',
+      method: 'GET'}).success(function(jsondata) {
+        $('.results').html(console.log("gg"));
+
+    });
+  }
+
+</script>
+
+<script>
+  $(document).ready(function () {
+var data =
+[
+  {
+    "name": "Ivan",
+    "contacts": "123",
+    "text": "locsl",
+    "urgency": "1",
+    "complete": "1",
+    "date": "1970-01-01 03:00:00",
+    "id": "1"
+  },
+  {
+    "name": "Ivan",
+    "contacts": "123",
+    "text": "locsl",
+    "urgency": "1",
+    "complete": "1",
+    "date": "1970-01-01 03:00:00",
+    "id": "2"
+  },
+  {
+    "name": "Ivan",
+    "contacts": "123",
+    "text": "locsl",
+    "urgency": "1",
+    "complete": "1",
+    "date": "1970-01-01 03:00:00",
+    "id": "3"
+  },
+];
+$('#table').bootstrapTable({
+                //Assigning data to table
+                data: jsondata
+            });
+        });
+</script>
+
+
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Sign in · Twitter Bootstrap</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- Le styles -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style type="text/css">
+         body {
+         padding-top: 40px;
+         padding-bottom: 40px;
+         background-color: #f5f5f5;
+         }
+         .form-signin {
+         max-width: 300px;
+         padding: 19px 29px 29px;
+         margin: 0 auto 20px;
+         background-color: #fff;
+         border: 1px solid #e5e5e5;
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+         -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+         -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+         box-shadow: 0 1px 2px rgba(0,0,0,.05);
+         }
+         .form-signin .form-signin-heading,
+         .form-signin .checkbox {
+         margin-bottom: 10px;
+         }
+         .form-signin input[type="text"],
+         .form-signin input[type="password"] {
+         font-size: 16px;
+         height: auto;
+         margin-bottom: 15px;
+         padding: 7px 9px;
+         }
+      </style>
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+      <script src="/wp-content/themes/clear-theme/js/html5shiv.js"></script>
+      <![endif]-->
+      <!-- Fav and touch icons -->
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://mybootstrap.ru/wp-content/themes/clear-theme/img/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://mybootstrap.ru/wp-content/themes/clear-theme/img/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://mybootstrap.ru/wp-content/themes/clear-theme/img/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="http://mybootstrap.ru/wp-content/themes/clear-theme/img/apple-touch-icon-57-precomposed.png">
+      <link rel="shortcut icon" href="http://mybootstrap.ru/wp-content/themes/clear-theme/img/favicon.png">
+
+   </head>
+
+     <div class="container">
+       <h2>Список заявок</h2>
+       <div class="table-responsive">
+       <table id="table" class="table">
+         <thead>
+           <tr>
+             <th data-field="id">#</th>
+             <th data-field="name">Имя</th>
+             <th data-field="contacts">Контакты</th>
+             <th data-field="text">Текст заявки</th>
+             <th data-field="urgency">Коэффициент срочности</th>
+             <th data-field="complete">Выполнено</th>
+             <th data-field="date">Дата добавления</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>1</td>
+             <td>Anna</td>
+             <td>Pitt</td>
+             <td>35</td>
+             <td>New York</td>
+             <td>USA</td>
+           </tr>
+         </tbody>
+       </table>
+       </div>
+     </div>
+      <!-- /container -->
+      <!-- Le javascript
+         ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="./Login_files/jquery.js"></script>
+      <script src="./Login_files/bootstrap-transition.js"></script>
+      <script src="./Login_files/bootstrap-alert.js"></script>
+      <script src="./Login_files/bootstrap-modal.js"></script>
+      <script src="./Login_files/bootstrap-dropdown.js"></script>
+      <script src="./Login_files/bootstrap-scrollspy.js"></script>
+      <script src="./Login_files/bootstrap-tab.js"></script>
+      <script src="./Login_files/bootstrap-tooltip.js"></script>
+      <script src="./Login_files/bootstrap-popover.js"></script>
+      <script src="./Login_files/bootstrap-button.js"></script>
+      <script src="./Login_files/bootstrap-collapse.js"></script>
+      <script src="./Login_files/bootstrap-carousel.js"></script>
+      <script src="./Login_files/bootstrap-typeahead.js"></script>
+   </body>
+</html>

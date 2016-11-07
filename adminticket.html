@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+    <script src="adminticket.js"></script>
+    <link rel="stylesheet" href="adminticket.css">
+</head>
+<body>
+  <div class="container">
+      <div class="modal-body">
+    <div class="form-inline">
+      <center>
+    <input class="form-control" id="IdInput"  class="input-block-level" placeholder="Введите id заявки">
+    <input  type="button" value="Отметить как выполненную" class="btn btn-large btn-primary" onclick="Updatecomplete()">
+    <input type="button" value="Выйти из режима администратора" class="btn btn-large btn-primary" onclick="Deauth()">
+  </center>
+  </div>
+</div>
+    <h2>Список заявок</h2>
+    <form id="form1" runat="server">
+      <div class="table-responsive">
+        <table id="table" class = "table">
+            <thead>
+                <tr>
+                  <th data-field="id">#</th>
+                  <th data-field="name">Имя</th>
+                  <th data-field="contacts">Контакты</th>
+                  <th data-field="text">Текст заявки</th>
+                  <th data-field="urgency">Коэффициент срочности</th>
+                  <th data-field="complete">Выполнено</th>
+                  <th data-field="date">Дата добавления</th>
+                </tr>
+            </thead>
+        </table>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
